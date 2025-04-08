@@ -48,7 +48,7 @@ const planetProjects = {
 };
 
 // Load Drone Model
-loader.load('./assets/drone/buster_drone.glb', (gltf) => {
+loader.load('./public/assets/drone/buster_drone.glb', (gltf) => {
     drone = gltf.scene;
     drone.scale.set(0.5, 0.5, 0.5);
     drone.position.set(0, 1, 0);
@@ -57,7 +57,7 @@ loader.load('./assets/drone/buster_drone.glb', (gltf) => {
 
 // Load Planets Model
 let planets;
-loader.load('./assets/planets/solar_system_animation.glb', (gltf) => {
+loader.load('./public/assets/planets/solar_system_animation.glb', (gltf) => {
     planets = gltf.scene;
     planets.position.set(-5, 0, -10);
     planets.traverse((child) => console.log(child.name));
@@ -67,12 +67,12 @@ loader.load('./assets/planets/solar_system_animation.glb', (gltf) => {
 // Skybox setup
 const cubeTextureLoader = new THREE.CubeTextureLoader();
 scene.background = cubeTextureLoader.load([
-    './assets/skybox/skybox/right.png',
-    './assets/skybox/skybox/left.png',
-    './assets/skybox/skybox/top.png',
-    './assets/skybox/skybox/bottom.png',
-    './assets/skybox/skybox/front.png',
-    './assets/skybox/skybox/back.png'
+    './public/assets/skybox/skybox/right.png',
+    './public/assets/skybox/skybox/left.png',
+    './public/assets/skybox/skybox/top.png',
+    './public/assets/skybox/skybox/bottom.png',
+    './public/assets/skybox/skybox/front.png',
+    './public/assets/skybox/skybox/back.png'
 ]);
 
 // Lighting
